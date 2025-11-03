@@ -224,6 +224,7 @@ $(document).ready(function () {
         $('#tabs ul li:not(:first)').remove(); // All li's in ul except for the first one (the input tab)
         $('[id^="table-tab"]').remove(); // Remove all div's with id's starting with 'table-tab'
         $tabs.tabs('refresh');
+        updateDeleteList();
     });
 
     // --- Auto table generation ---\\
