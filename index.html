@@ -1,0 +1,109 @@
+<!--Name: Angelos Boules
+    File: index.html
+    Date: 11/1/2025
+    
+    Purpose: GUI Assignment: Structure and content for the Dynamic Multiplication webpage 
+    This file is responsible for the content and structure of the website and some layout aspects
+    including the form, headers, and table which are screen responsive using bootstrap. Provides forms
+    for user to generate custom table. Outlines positioning for the form as well as the tab management
+    settings
+
+    Angelos Boules, UMass Lowell Computer Science, angelos_boules@student.uml.edu
+    Copyright (c) 2025 by Angelos. All rights reserved. May be freely copied or
+    excerpted for educational purposes with credit to the author.
+    updated by AB on November 2, 2025 at 7:57 PM
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Favicon is from the google fonts icons list
+         src: https://fonts.google.com/icons?selected=Material+Symbols+Outlined:calculate:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=math&icon.size=24&icon.color=%23FFFFFF -->
+        <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+
+        <!-- Bootstrap CDN used for stylign -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/style.css">
+        
+        <!-- Google Fonts API -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+        
+        <title>Multiplication Table</title>
+        
+        <!-- jQuery CDN, validation plug-in, and UI library -->
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.css">
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    </head>
+    <body>
+        <!-- Header Section -->
+        <h1 class="text-center" id="title"> Dynamic Multiplication Table </h1>
+
+        <div id="tabs" class="mb-3">
+            <ul>
+                <li><a href="#input-tab">Input</a></li>
+            </ul>
+
+            <div id="input-tab" class="container py-4">
+                <div class="d-flex flex-column flex-md-row justify-content-center align-items-center text-center gap-4">
+                    
+                    <!-- Table Settings Form w/ Sliders-->
+                    <div class="d-flex justify-content-center">
+                    <form id="settings" class="w-100" novalidate>
+                        <fieldset>
+                            <legend> Set your table ranges </legend>
+                            
+                            <div class="form-row">
+                                <label for="minCol"> Minimum Column Value </label>
+                                <input type="text" inputmode="numeric" id="minCol" name="minCol" class="param-input" required>
+                            </div>
+                            <div id="minCol-slider" class="mx-4"></div>
+                                
+                            <div class="form-row">
+                                <label for="maxCol"> Maximum Column Value </label>
+                                <input type="text" inputmode="numeric" id="maxCol" name="maxCol" class="param-input" required>
+                            </div>
+                            <div id="maxCol-slider" class="mx-4"></div>
+                                
+                            <div class="form-row">
+                                <label for="minRow"> Minimum Row Value </label>
+                                <input type="text" inputmode="numeric" id="minRow" name="minRow" class="param-input" required>
+                            </div>
+                            <div id="minRow-slider" class="mx-4"></div>
+                                
+                            <div class="form-row">
+                                <label for="maxRow"> Maximum Row Value </label>
+                                <input type="text" inputmode="numeric" id="maxRow" name="maxRow" class="param-input" required>
+                            </div>
+                            <div id="maxRow-slider" class="mx-4"></div>
+                        </fieldset>
+                    </form>
+                </div>
+
+                <div class="col-12 col-md-4 d-flex justify-content-center">
+                    <!-- Tab Controls -->
+                    <div id="tab-delete-controls" class="p-3 border rounded text-center ">
+                        <label class="form-label d-block mb-1"> Select tabs to delete: </label>
+                        
+                        <!-- Checkboxes for selected tabs to delete -->
+                        <div id="delete-list" class="d-flex flex-column justify-content-center mb-3 small"></div>
+
+                        <!-- Delete buttons -->
+                        <div class="d-flex flex-wrap justify-content-center gap-2">
+                            <button id="delete-selected" class="btn btn-sm m-2"> Delete Selected </button>
+                            <button id="delete-all" class="btn btn-sm px-3"> Delete All </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="./js/script.js"></script>
+    </body>
+</html>

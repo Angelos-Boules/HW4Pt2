@@ -1,0 +1,199 @@
+/*  Name: Angelos Boules
+    File: style.css
+    Date: 11/1/2025
+    
+    Purpose: GUI Assignment: Styling the Dynamic Multiplication webpage - 
+    This file is responsible for styling the forms, table, and overall page which generates
+    a dynamic multiplication table based on given user parameters
+    
+    Angelos Boules, UMass Lowell Computer Science, angelos_boules@student.uml.edu
+    Copyright (c) 2025 by Angelos. All rights reserved. May be freely copied or
+    excerpted for educational purposes with credit to the author.
+    updated by AB on November 2, 2025 at 7:57 PM
+*/
+body {
+    padding: 1rem;
+    background-color: #F7F7F7;
+}
+
+button {
+    border: none;
+    background-color: rgb(247, 108, 94, 0.5) !important;
+    color: #2E2E2E;
+}
+
+#title {
+    color: #374785;
+    font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+    margin: 0.75em;
+    margin-top: 0;
+}
+
+/** User Parameter input styling **/
+form {
+    display: inline-block;
+    width:auto;
+    min-width: 330px;
+    max-width: 330px;
+}
+form label {
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+    color: #2E2E2E;
+}
+form legend {
+    color: #2E2E2E;
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    text-align: left;
+}
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1.5em;
+}
+
+.param-input {
+    margin: 0.25rem 0;
+    width: 3.5em;
+    height: 1.5em;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+/** Removing bootstrap override of fieldset & legend default behavior **/
+fieldset { 
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    padding: 1rem 0rem;
+    margin: 1rem 0;
+    width: 100%;
+}
+legend {
+    float: none;
+    width: auto;
+    padding: 0 1rem;
+    margin-bottom: 0;
+    font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+}
+
+.note {
+    width: 100%;
+    text-align: justify;
+}
+
+
+/* Table Styling */
+.mult-table {
+    width: 100%;
+    background-color: #F7F7F7;
+    color:#2E2E2E;
+    font-family: "JetBrains Mono", "Fira Mono", Consolas, monospace;
+}
+/* Individual cell */
+.mult-table td {
+    border-bottom: 1px solid #CFCFCF;
+    text-align: center;
+    padding: 0.5em 1em;
+    min-width: 50px;
+    height: 40px;
+}
+/* First row and left column shading */
+.mult-table thead, 
+.mult-table tbody td:first-child {
+    border: none;
+    background-color: #EDEDED !important;
+    font-weight: bold;
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+
+}
+/* Making top cells sticky */
+.mult-table thead td {
+    position: sticky;
+    top: 0;
+    background-color: #EDEDED;
+    z-index: 3;
+}
+/* Making left column stick */
+.mult-table tbody td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: #EDEDED;
+    z-index: 2;
+}
+/* Remove top left cell */
+.mult-table thead td:first-child {
+    position: sticky;
+    top: 0;
+    left: 0;
+    color: #F7F7F7;
+    background-color: #F7F7F7;
+    z-index: 4;
+}
+/* Alternate rows and hover cell highlighting */
+.mult-table tbody tr:nth-child(even) {
+    background-color: rgb(255, 192, 203, 0.5);
+}
+.mult-table tbody td:hover {
+    background-color: #FAD1CC;
+}
+/* Scrolling functionality */
+.table-wrapper {
+    max-width: 100%;
+    max-height: 400px;
+    overflow: auto;
+    background-color: #F7F7F7;
+    border-radius: 4px;
+
+}
+
+/* Slider styling */
+.ui-slider {
+    background: #ddd !important;
+    border-radius: 4px;
+    margin: 5px 0;
+}
+.ui-slider .ui-slider-handle {
+    border-radius: 50%;
+    background: rgb(255, 124, 146) !important;
+    cursor: pointer;
+}
+.ui-slider-range {
+    background: rgb(255, 192, 203, 0.5) !important;
+}
+
+/* Tabs styling */
+#tabs {
+  
+    font-family: 'Poppins', sans-serif;
+}
+#tabs .ui-tabs-nav {
+    background: #f7f7f7;
+    border-radius: 0.5rem 0.5rem 0 0;
+    border: 1px solid #ddd;
+    padding: 0.25rem 0.5rem;
+}
+#tabs .ui-tabs-nav li {
+    position: relative;
+    margin-right: 4px;
+}
+#tabs .ui-icon-close {
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+/* Styling the settings panel */
+#input-tab form,
+#tab-delete-controls {
+    max-width: 330px;
+}
+.ui-tabs-panel {
+    padding: 0 !important;
+}
+.ui-tabs .ui-tabs-panel {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-top: none;
+}
