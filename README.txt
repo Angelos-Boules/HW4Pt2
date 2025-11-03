@@ -1,2 +1,2 @@
-Application GitHub URL: https://angelos-boules.github.io/HW3/
-GitHub Repo Link: https://github.com/Angelos-Boules/HW4Pt2.git
+Application GitHub URL: https://angelos-boules.github.io/HW4Pt2/
+GitHub Repo Link: https://github.com/Angelos-Boules/HW4Pt2.git/
