@@ -166,8 +166,10 @@ legend {
 
 /* Tabs styling */
 #tabs {
-  
     font-family: 'Poppins', sans-serif;
+}
+#tabs:has(ul:empty) {
+    display: none;
 }
 #tabs .ui-tabs-nav {
     background: #f7f7f7;

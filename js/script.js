@@ -193,7 +193,7 @@ $(document).ready(function () {
     function updateDeleteList() {
         const $list = $('#delete-list');
         $list.empty();
-        $('#tabs ul li:not(:first) a').each(function() {
+        $('#tabs ul li a').each(function() {
             const label = $(this).text();
             const href = $(this).attr('href');
             const id = href.slice(1);
@@ -221,7 +221,7 @@ $(document).ready(function () {
 
     // Delete all button
     $('#delete-all').click(() => {
-        $('#tabs ul li:not(:first)').remove(); // All li's in ul except for the first one (the input tab)
+        $('#tabs ul li').remove();
         $('[id^="table-tab"]').remove(); // Remove all div's with id's starting with 'table-tab'
         $tabs.tabs('refresh');
         updateDeleteList();
