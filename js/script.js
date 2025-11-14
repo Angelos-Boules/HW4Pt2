@@ -11,7 +11,7 @@
     Angelos Boules, UMass Lowell Computer Science, angelos_boules@student.uml.edu
     Copyright (c) 2025 by Angelos. All rights reserved. May be freely copied or
     excerpted for educational purposes with credit to the author.
-    updated by AB on November 1, 2025 at 5:05 PM
+    updated by AB on November 12, 2025 at 9:03 PM
 */
 $(document).ready(function () {
 
